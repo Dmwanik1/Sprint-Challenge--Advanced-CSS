@@ -1,1 +1,51 @@
 // Mixins Here
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn() {
+  width: 100px;
+  height: 30px;
+  background-color: @ebony-clay;
+  color: @sea-shell;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 9%;
+  &:hover {
+    background: @sea-shell;
+    color: @ebony-clay;
+  }
+  @media (max-width: 515px) {
+    width: 90%;
+    height: 50px;
+    font-size: 2.5rem;
+  }
+}
+.new-btn(@width, @height,@btn-bg-color, @font-color,@fontsize) {
+  .center;
+  width: @width;
+  height: @height;
+  background-color: @ebony-clay;
+  color: @font-color;
+  border: 1px solid @nav-border;
+}
+header nav a:hover {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 4s;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {
+    background-color: @waterloo;
+  }
+  to {
+    background-color: @river-bend;
+  }
+}
